@@ -16,7 +16,7 @@ module "external-dns" {
 }
 
 module "cert-manager" {
-  source = "git::https://github.com/willthames/terraform-kubernetes-module-civo-cert-manager?ref=v1.6.0-3-g1937e91"
+  source = "git::https://github.com/willthames/terraform-kubernetes-module-civo-cert-manager?ref=v1.6.0-5-ge7fbc85"
 
   email_address = var.email_address
   civo_token    = file(var.civo_token)
@@ -35,7 +35,7 @@ module "fluent-bit" {
 }
 
 module "prometheus" {
-  source = "git::https://github.com/willthames/terraform-kubernetes-module-prometheus?ref=v19.3.0-3-g9a89032"
+  source = "git::https://github.com/willthames/terraform-kubernetes-module-prometheus?ref=v19.3.0-4-g1a95ad2"
 
   domain = var.domain
 
@@ -43,7 +43,7 @@ module "prometheus" {
 }
 
 module "grafana" {
-  source = "git::https://github.com/willthames/terraform-kubernetes-module-grafana?ref=v8.2.3-5-g57394c4"
+  source = "git::https://github.com/willthames/terraform-kubernetes-module-grafana?ref=v8.2.3-6-gc109472"
 
   domain = var.domain
 
